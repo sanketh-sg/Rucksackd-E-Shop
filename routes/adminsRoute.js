@@ -21,7 +21,8 @@ if(process.env.NODE_ENV === 'development'){
 
 }
 router.get('/', (req,res) => {
-    res.send('Helloo Admin')
+    let success = req.flash('successProduct')
+    res.render('createproducts', {success})
 });
 
 module.exports = router;
