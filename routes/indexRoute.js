@@ -16,7 +16,7 @@ router.get('/shop', isLoggedIn, async (req,res) => {
     res.render('shop',{ products, success });
 });
 
-router.get("/cartAdd/:productId", isLoggedIn, async (req,res) => {
+router.get("/cart/add/:productId", isLoggedIn, async (req,res) => {
 
     let user = await userModel.findOne({email: req.user.email})
 
