@@ -13,7 +13,7 @@ const indexRoute = require('./routes/indexRoute')
 require('dotenv').config()
 
 dbConn.on('connected', () => {
-    console.log('Database connected successfully');
+    console.info('Database connected successfully');
     // Start your server or perform other operations here
 });
 
