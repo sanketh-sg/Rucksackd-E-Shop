@@ -1,0 +1,9 @@
+.material-header {
+    background-color: #ffffff; /* Material white background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.material-header:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
