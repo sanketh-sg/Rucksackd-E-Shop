@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+<% if(error.length>0){ %>
+    <div class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-blue-500">
+        <span class="inline-block mt-1 mb-1 text-white">
+            <%= error %>
+        </span>
+    </div>
+<% } %>
+
+    <div class="w-full h-screen flex px-20">
+        <div class="w-1/2 flex items-center justify-center h-screen">
+            <div class="w-full px-32">
+                <h4 class="text-2xl capitalize mb-5">Update Your Details</h4>
+                <form action="/users/update" method="post">
+                    <input class="block bg-zinc-100 w-full px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="text" placeholder="<%= user.fullname %>" name="fullname" value="<%= user.fullname %>">
+                    <input class="block bg-zinc-100 w-full px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="email" placeholder="<%= user.email %>" name="email" value="<%= user.email %>" readonly>
+                    <input class="block bg-zinc-100 w-full px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="password" placeholder="Enter current password" name="password">
+                    <input class="block bg-zinc-100 w-full px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="password" placeholder="Enter new password" name="newPassword">
+                    <input class="block bg-zinc-100 w-full px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="tel" placeholder="<%= user.contact %>" name="contact" value="<%= user.contact %>">   
+                    <input class="px-5 rounded-md py-3 mt-2 bg-yellow-500 text-white" type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>

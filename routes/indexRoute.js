@@ -39,4 +39,10 @@ router.get('/cart', isLoggedIn, async(req,res) => {
     res.render('cart',{user});
 })
 
+router.get('/myAccount', isLoggedIn, async(req,res) => {
+    let user = await userModel.findOne({email: req.user.email})
+    let error = req.flash('error')
+    res.render('myAccount', {user, error});
+})
+
 module.exports = router;
