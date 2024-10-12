@@ -2,9 +2,11 @@
 
 Welcome to **Rucksack'd**! This is a modern web application designed for a seamless(maybe not so seamless😅 yet) e-commerce experience. Users can browse products, manage their cart, and update their personal details. Built with Node.js, Express, and MongoDB, this project demonstrates a full-stack application integrating backend and frontend technologies.
 
-##Images
+## Login Page
 ![Login Page](./public/images/login-page.png)
+## Home
 ![Home Page](./public/images/home.png)
+## Cart
 ![Cart](./public/images/cart.png)
 ## Table of Contents
 
